@@ -1,0 +1,418 @@
+* {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+td:focus {
+  outline: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: rgb(241, 245, 248);
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 200px;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 18px 0 #d4dee6;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+}
+
+.icon {
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 100px;
+}
+
+.logospan {
+  width: 150px;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.main {
+  margin-left: 200px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  height: 50px;
+  background: rgba(218, 227, 234, 0.24);
+  border-bottom: 1px solid #d9e3ea;
+}
+
+.userLogo {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.headTail {
+  height: 50px;
+  width: 130px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.loginTitle {
+  height: 50px;
+  line-height: 50px;
+  margin-right: 10px;
+}
+
+.content {
+  margin-left: 5%;
+  margin-top: 2%;
+  width: 80%;
+  height: 80vh;
+  background: #fff;
+  min-height: 50px;
+  max-height: 800px;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 阴影 */
+  transition: all 0.1s ease-in-out;
+  /* overflow-y: hidden; */
+}
+
+/* .content:hover{
+    overflow-y: auto;
+} */
+
+/* 设置滚动条 */
+tbody::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  -webkit-box-shaow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #ededed;
+}
+
+tbody::-webkit-scrollbar-track {
+  -webkit-box-shaow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0);
+}
+
+.funList {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.funList > a {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-family: "Microsoft JhengHei";
+}
+
+.funList > a:hover {
+  color: #1296db;
+}
+
+/* 表格美化 */
+.bordered {
+  width: 100%;
+  text-align: center;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  table-layout: fixed;
+  word-break: break-all;
+  /* 阴影 */
+}
+
+.bordered th:first-child {
+  border-top-left-radius: 1rem;
+}
+
+.bordered th:last-child {
+  border-top-right-radius: 1rem;
+  padding-right: 10px;
+}
+thead {
+  padding-right: 10px;
+}
+thead tr {
+  display: block;
+}
+
+tbody > tr:last-child > td:first-child {
+  border-bottom-left-radius: 1rem;
+}
+
+.bordered th,
+.bordered td {
+
+  height: 5vh;
+}
+
+
+.bordered th {
+  background-color: rgb(235, 240, 245);
+}
+
+.bordered tr {
+  transition: all 0.1s ease-in-out;
+}
+
+.bordered tr:hover {
+  /* background: #fbf8e9; */
+  background: rgb(241, 245, 248);
+  border-radius: 1rem;
+}
+
+tbody {
+  display: block;
+  height: 75vh;
+  margin-right: 10px;
+  overflow-y: hidden;
+  table-layout: fixed;
+}
+
+tbody:hover {
+  margin-right: 0px;
+  overflow-y: auto;
+}
+
+.red:hover > a {
+  color: red;
+}
+
+.blue:hover > a {
+  color: blue;
+}
+
+/* 右边栏美化 */
+.right {
+  position: fixed;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  transform: translateX(200px);
+}
+
+.rightLayout {
+  width: 150px;
+  height: 300px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 18px 0 #d4dee6;
+  border-radius: 6px;
+}
+
+.roomContent {
+  width: 90%;
+  height: 30px;
+  margin: 10px 0;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.roomContent:last-child {
+  margin-top: 70px;
+}
+
+.roomContent:last-child:hover {
+  background: rgb(241, 245, 248);
+}
+
+.rightContent {
+  position: relative;
+  top: 50%;
+  margin-top: -50%;
+}
+
+.left {
+  position: fixed;
+  right: 0;
+  width: 200px;
+  height: 100%;
+}
+
+.top {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: auto;
+}
+
+/* 住户信息登记界面 */
+.infoRegister {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  /* opacity: 0; */
+  z-index: -99;
+}
+.infoRegister:hover {
+  /* z-index: ; */
+  /* opacity: 0; */
+}
+
+.infoInput {
+  width: 270px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoInput span {
+  width: 270px;
+}
+
+.infoRegister input {
+  border: 0px;
+  border: 0px solid #9bc0dd;
+  border-bottom: 1px solid #9bc0dd;
+  width: 270px;
+  height: 0px;
+  transition: 1s;
+  outline: none;
+}
+
+.infoInput:hover > input {
+  height: 30px;
+}
+
+.infoRegister .radio {
+  border: 1px solid #9bc0dd;
+  width: 18px;
+  height: 18px;
+}
+.sex {
+  margin-bottom: 5px;
+}
+.sexRadio {
+  width: 180px;
+  height: 18px;
+  line-height: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 下拉菜单 */
+.shortselect {
+  background: #fafdfe;
+  height: 28px;
+  width: 180px;
+  line-height: 28px;
+  border: 1px solid #9bc0dd;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* 提示文字span */
+.tipWord {
+  width: 80px;
+}
+
+/* 按钮 */
+.btn-grad {
+  background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
+}
+
+.infoRegister .btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.infoRegister .btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.black {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.infoRegisterBg {
+  width: 400px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.infoRegisterTitle {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #9bc0dd;
+}
+#roomIdWord {
+  margin-right: 10px;
+}

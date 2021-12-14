@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>酒店管理系统</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        if (!document.cookie.includes("token")) {
+            alert("no token");
+            document.location.href = "/login/index.html"
+        }
+    </script>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="header">
+            <svg class="icon" viewBox="0 0 1027 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M513.495618 1024C231.521714 1024 2.991237 795.469523 2.991237 513.495618S231.521714 2.991237 513.495618 2.991237s510.504382 228.530477 510.504382 510.504381-228.530477 510.504382-510.504382 510.504382z"
+                    fill="#11AAED"></path>
+                <path
+                    d="M668.042843 490.363389c49.455112-25.724635 83.256086-77.37332 83.256086-136.898929 0-85.050828-69.197274-154.248101-154.248101-154.248102-21.536904 0-42.375852 4.387147-61.918598 12.962026-20.440117-8.574878-42.774684-13.261149-66.305745-13.261149-94.822201 0-171.896397 77.173905-171.896397 171.896397 0 67.203116 38.786368 125.53223 95.121324 153.749562-126.130477 33.900682-219.157936 149.162999-219.157936 285.862512 0 9.771373 7.976631 17.748004 17.748004 17.748004s17.748004-7.976631 17.748004-17.748004c0-143.679065 116.857644-260.536709 260.536709-260.536709s260.536709 116.857644 260.536709 260.536709c0 9.771373 7.976631 17.748004 17.748004 17.748004s17.748004-7.976631 17.748003-17.748004c0-136.699513-93.127167-251.961831-219.157935-285.862512 5.583642-2.791821 10.967868-5.882765 16.152677-9.173126 1.096787 0.099708 2.193574 0.099708 3.290361 0 8.176047-0.897371 16.551509-1.296203 24.827264-1.296202 126.130477 0 228.630185 102.599416 228.630185 228.630185 0 9.771373 7.976631 17.748004 17.748003 17.748004s17.748004-7.976631 17.748004-17.748004C854.09776 624.171373 775.727361 523.665823 668.042843 490.363389z m-70.992015-255.750731c65.508082 0 118.851801 53.34372 118.851801 118.851802 0 61.81889-47.460954 112.76962-107.883934 118.253554 20.639533-28.416748 32.903603-63.2148 32.903603-100.904382 0-54.340798-25.325803-102.798832-64.810127-134.306524 6.879844-1.196495 13.859396-1.89445 20.938657-1.89445zM332.426095 370.813632c0-75.279455 61.220643-136.500097 136.500098-136.500097s136.500097 61.220643 136.500097 136.500097-61.220643 136.500097-136.500097 136.500097-136.500097-61.220643-136.500098-136.500097z"
+                    fill="#FFFFFF"></path>
+            </svg>
+            <img class="logospan" src="logo.png" alt="请刷新网页" />
+            <div class="funList">
+                <a href="#">房间信息查询</a>
+                <a href="#">住户信息管理</a>
+                <a href="#">房间信息管理</a>
+                <a href="#">内部人员管理</a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="mainHead">
+                <div class="headTail">
+                    <div class="loginTitle">
+                        你好,
+                        <span class="userName">???</span>
+                    </div>
+                    <svg class="userLogo" viewBox="0 0 1052 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M750.364444 468.622222h123.847112v87.523556h-123.818667v109.397333l-146.858667-83.939555V442.311111l146.858667-83.086222v109.397333z m-146.830222 175.900445l96.540445 56.576-1.28 106.296889h-95.260445v-162.872889z m-0.199111-473.742223l-48.298667-8.021333-70.428444-11.804444h222.236444l-2.076444 170.154666-101.233778 57.457778-0.199111-207.786667zM544.995556 873.045333l-384.853334-65.649777-7.964444-656.440889 392.817778 65.649777v656.440889z"
+                            fill="#333333"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="content" data-id="-1">
+                <!-- <div class="infoRegisterBg">
+                    <div class="infoRegisterTitle">住户信息登记</div>
+                    <div class="infoInput"><span class="tipWord">姓名</span><input type="text" id="userName" /></div>
+                    <div class="infoInput"><span class="tipWord">身份证</span><input type="text" id="userId" /></div>
+                    <div class="infoInput"><span class="sex"> 性别 </span>
+                        <div class="sexRadio"> 男 <input class="radio" type="radio" name="sex" id="man" /> 女 <input
+                                class="radio" type="radio" name="sex" id="woman" /> </div>
+                    </div>
+                    <div class="infoInput">
+                        <span>房间号</span><select id="roomId" name="roomId" class="shortselect">
+                            <option value="101">101</option>
+                            <option value="102">102</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                            <option value="103">103</option>
+                        </select>
+                    </div>
+                    <div class="infoInput">
+                        <input type="text" />
+                    </div>
+                    <div class="btn-grad">登记</div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="black"></div>
+    <div class="infoRegister">
+    </div>
+</body>
+<script src="./style.js"></script>
+
+</html>
